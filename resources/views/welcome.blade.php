@@ -37,11 +37,11 @@
                             <!-- //Login submenu -->
                         </div>
                         <div class="cart_btn">
-                            <a href="shop_cart.html" class="view_cart_btn"><i class="fa fa-shopping-cart"></i> $80.00 (2 items)</a>
+                            <a href="shop_cart.html" class="view_cart_btn"><i class="fa fa-shopping-cart"></i> $00.00 (0 items)</a>
                             <!-- Cart submenu -->
                             <div class="cart_submenu">
-                                <div class="cart_wrap">
-                                    <ul class="product_posts">
+                                <!--div class="cart_wrap">
+                                    < ul class="product_posts">
                                         <li>
                                             <img src="/img/shop/4.jpg" alt="" />
                                             <a href="shop_product.html" class="title">Duis Aute Irure Dolor</a>
@@ -54,22 +54,22 @@
                                             <div class="price">1<span>x</span>$400</div>
                                             <a class="remove_products" href="javascript:void(0);">Close</a>
                                         </li>
-                                    </ul>
+                                    </ul >
                                     <div class="subtotal">Subtotal: <span>$1,590</span></div>
                                     <a href="shop_cart.html" class="shortcode_button btn_normal btn_type3">View cart</a>
                                     <a href="javascript:void(0);" class="shortcode_button btn_normal btn_type1 mr0">Checkout</a>
-                                </div>
+                                </div -->
                             </div>
                             <!-- //Cart submenu -->
                         </div>
                         <div class="social_icons">
                             <ul>
                                 <li><span>Follow:</span></li>
-                                <li><a class="soc_fb" href="javascript:void(0);"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a class="soc_tweet" href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="soc_instagram" href="javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
+                                <li><a class="soc_fb" href="https://www.facebook.com/root.et"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a class="soc_tweet" href="https://twitter.com/shadyber"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="soc_instagram" href="https://www.instagram.com/birhaneshady/;"><i class="fa fa-instagram"></i></a></li>
                                 <li><a class="soc_dribbble" href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a class="soc_pinterest" href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a class="soc_pinterest" href="https://www.pinterest.com/shadyber9/"><i class="fa fa-pinterest"></i></a></li>
                                 <li><a class="soc_flickr" href="javascript:void(0);"><i class="fa fa-flickr"></i></a></li>
                             </ul>
                         </div>
@@ -79,15 +79,13 @@
                                 <span class="selectArrow"></span>
                                 <div class="selectOptions">
                                     <span class="selectOption" data-value="english"><img src="/img/imgs/uk_flag.png" alt="" />Eng</span>
-                                    <span class="selectOption" data-value="germany"><img src="/img/imgs/germany_flag.png" alt="" />Ger</span>
-                                    <span class="selectOption" data-value="france"><img src="/img/imgs/france_flag.png" alt="" />Fr</span>
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="fleft">
-                    <div class="phone"><i class="fa fa-phone"></i> +1 (800) 456 37 96</div>
+                    <div class="phone"><a href="tel:+251912852989" > <i class="fa fa-phone"></i> +251 - 91285 2989</a></div>
                     <div class="email"><a href="mailto:#"><i class="fa fa-envelope"></i> info@rootsystem.info</a></div>
                 </div>
                 <div class="clear"></div>
@@ -102,79 +100,10 @@
                     <div class="fright">
                         <nav>
                             <ul class="menu">
-                                <li class="current-menu-parent menu-item-has-children megamenu mega_submenu"><a href="javascript:void(0);">Home</a>
-                                    <div class="sub-nav">
-                                        <div class="megamenu_wrap">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <ul class="sub-menu">
-                                                            <li class="current-menu-item"><a href="index.html">Personal Portfolio</a></li>
-                                                            <li><a href="home_creative_agency.html">Creative Agency</a></li>
-                                                            <li><a href="home_photo_studio.html">Photography Studio</a></li>
-                                                            <li><a href="home_blog.html">Blog with Top Slider</a></li>
-                                                            <li><a href="home_spa_onepage.html">Spa Onepage Scroll</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <ul class="sub-menu">
-                                                            <li><a href="home_health_care.html">Health Care</a></li>
-                                                            <li><a href="home_travel_agency.html">Travel Agency</a></li>
-                                                            <li><a href="home_real_estate.html">Real Estate</a></li>
-                                                            <li><a href="home_barber_shop.html">Barber Shop</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <ul class="sub-menu">
-                                                            <li><a href="home_cleaning.html">Cleaning</a></li>
-                                                            <li><a href="home_construction.html">Construction</a></li>
-                                                            <li><a href="home_auto_service.html">Auto Service</a></li>
-                                                            <li><a href="home_development_agency.html">Design Agency</a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <ul class="sub-menu">
-                                                            <li><a href="home_handyman.html">Handyman</a></li>
-                                                            <li><a href="home_hosting.html">Hosting</a></li>
-                                                            <li><a href="home_lawyer.html">Lawyer</a></li>
-                                                            <li><a href="home_pets_grooming.html">Pets Grooming</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <li class="current-menu-parent menu-item-has-children megamenu mega_submenu"><a href="/">Home</a>
+                                    
                                 </li>
-                                <li class="menu-item-has-children"><a href="javascript:void(0);">Pages</a>
-                                    <div class="sub-nav">
-                                        <ul class="sub-menu">
-                                            <li class="menu-item-has-children"><a href="javascript:void(0);">About</a>
-                                                <div class="sub-nav">
-                                                    <ul class="sub-menu">
-                                                        <li><a href="about.html">About 1</a></li>
-                                                        <li><a href="about2.html">About 2</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li><a href="service.html">Services</a></li>
-                                            <li><a href="careers.html">Careers</a></li>
-                                            <li class="menu-item-has-children"><a href="javascript:void(0);">Gallery</a>
-                                                <div class="sub-nav">
-                                                    <ul class="sub-menu">
-                                                        <li><a href="gallery_grid.html">Grid</a></li>
-                                                        <li><a href="gallery_masonry.html">Masonry</a></li>
-                                                        <li><a href="gallery_round.html">Round</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li><a href="showreel.html">Showreel</a></li>
-                                            <li><a href="404.html">404 Error</a></li>
-                                            <li><a href="faq.html">FAQ</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                            <li><a href="coming_soon.html">Coming Soon</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
+                               
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Portfolio</a>
                                     <div class="sub-nav">
                                         <ul class="sub-menu">
