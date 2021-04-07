@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="csrf_tocken" content="{{csrf_token()}}">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -37,7 +38,7 @@
                             <!-- //Login submenu -->
                         </div>
                         <div class="cart_btn">
-                            <a href="shop_cart.html" class="view_cart_btn"><i class="fa fa-shopping-cart"></i> $00.00 (0 items)</a>
+                            <a href="/shop" class="view_cart_btn"><i class="fa fa-shopping-cart"></i> $00.00 (0 items)</a>
                             <!-- Cart submenu -->
                             <div class="cart_submenu">
                                 <!--div class="cart_wrap">
@@ -101,9 +102,9 @@
                         <nav>
                             <ul class="menu">
                                 <li class="current-menu-parent menu-item-has-children megamenu mega_submenu"><a href="/">Home</a>
-                                    
+
                                 </li>
-                               
+
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Portfolio</a>
                                     <div class="sub-nav">
                                         <ul class="sub-menu">
@@ -151,19 +152,15 @@
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Shop</a>
                                     <div class="sub-nav">
                                         <ul class="sub-menu">
-                                            <li><a href="shop.html">All Products</a></li>
-                                            <li><a href="shop_product.html">Single Product</a></li>
-                                            <li><a href="shop_cart.html">Cart</a></li>
+                                            <li><a href="/shop">All Products</a></li>
+                                            <li><a href="/shop">Recent Products</a></li>
+                                            <li><a href="/shop">Tranding Products</a></li>
+
                                         </ul>
                                     </div>
                                 </li>
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Contact</a>
-                                    <div class="sub-nav">
-                                        <ul class="sub-menu">
-                                            <li><a href="contact_fullwidth.html">Fullwidth</a></li>
-                                            <li><a href="contact_sidebar.html">With Right Sidebar</a></li>
-                                        </ul>
-                                    </div>
+                                   
                                 </li>
                             </ul>
                         </nav>
