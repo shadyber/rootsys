@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->longText('detail');
             $table->string('photo')->default('/img/blog.jpg');
+            $table->string('thumbnail')->default('/thumbnail/blog.jpg');
             $table->string('tags');
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class BlogController extends Controller
 {
@@ -59,21 +60,21 @@ class BlogController extends Controller
 
         if($request->hasFile('photo')){
 
-
             $image = $request->file('photo');
             $input['title'] = time().'.'.$image->extension();
 
             $filePath = public_path('/thumbnails');
 
-            $img = \Intervention\Image\Facades\Image::make($image->path());
+            $img = Image::make($image->path());
             $img->resize(110, 110, function ($const) {
                 $const->aspectRatio();
             })->save($filePath.'/'.$input['title']);
-
             $filePath = public_path('/images');
             $image->move($filePath, $input['title']);
 
-$post->photo=$filePath;
+            $post->photo='/images/'.$img->filename.'.'.$img->extension;
+            $post->thumbnail='/thumbnails/'.$img->filename.'.'.$img->extension;
+
         }
 
         $post->save();
