@@ -12,6 +12,11 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
 
@@ -26,7 +31,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('blog.create');
     }
 
     /**
@@ -37,7 +43,42 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //save blog
+        $this->validate($request, [
+            'title' => 'required|max:120|unique:blogs',
+            'detail' => 'required|min:80',
+            'category_id' => 'required',
+            'photo' =>'required|image|mimes:jpg,jpeg,png,svg,gif|max:2048',
+        ]);
+
+        $post = new Blog;
+        $post->title = $request['title'];
+        $post->detail = $request['detail'];
+        $post->tags = $request['tags'];
+        $post->category_id = $request['category_id'];
+
+        if($request->hasFile('photo')){
+
+
+            $image = $request->file('photo');
+            $input['title'] = time().'.'.$image->extension();
+
+            $filePath = public_path('/thumbnails');
+
+            $img = \Intervention\Image\Facades\Image::make($image->path());
+            $img->resize(110, 110, function ($const) {
+                $const->aspectRatio();
+            })->save($filePath.'/'.$input['title']);
+
+            $filePath = public_path('/images');
+            $image->move($filePath, $input['title']);
+
+$post->photo=$filePath;
+        }
+
+        $post->save();
+
+        return redirect()->back()->with('sucsess','Blog Created Succusfully');
     }
 
     /**

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     use HasFactory;
+
+    public static function myAddress(){
+        return Address::all()->last();
+    }
 }

@@ -14,7 +14,7 @@
                 <div class="page_title">
                     <h1>Welcome to Our Blog</h1>
                     <div class="icon_divider"></div>
-                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium<br>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Our blog will allow us to leverage social technologies to engage in two-way communication with our community and to take your feedback into consideration as we create new content, tools and resources. In addition, we’ll use the blog to share multimedia, such as videos, photo albums and more. </p>
                 </div>
                 <div class="fl-container">
                     <div class="posts-block">

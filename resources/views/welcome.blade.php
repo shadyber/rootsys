@@ -225,7 +225,7 @@
                                                              data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:0.5;sY:0.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeOut;"
                                                              data-transform_out="opacity:0;s:500;s:500;"
                                                              data-start="2000"
-                                                             data-elementdelay="0.05">javascript:void(0);Programmer  javascript:void(0);Consultant  javascript:void(0);Tehnician
+                                                             data-elementdelay="0.05">#Programmer  #Consultant  #Tehnician #Graphics Designer
                                                         </div>
                                                         <!-- LAYER NR. 3 -->
                                                         <div class="tp-caption tp-resizeme slide_btn dark_parent z_index5"
