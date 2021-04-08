@@ -28,11 +28,22 @@
                             <a href="javascript:void(0);"><i class="fa fa-sign-in"></i> Login</a>
                             <!-- Login submenu -->
                             <div class="login_submenu">
-                                <form action="javascript:void(0);" method="post">
-                                    <input type="text" placeholder="Email or Login*" value="" name="name">
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    <input type="text" placeholder="Email or Login*" value="" name="email">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                     <input type="password" placeholder="Password*" value="" name="password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                     <div class="remember_me"><label><input name="remember" type="checkbox" checked value="remember">Remember Password?</label></div>
-                                    <a href="javascript:void(0);" class="shortcode_button left_icon btn_normal btn_type3"><i class="fa fa-sign-in"></i>Log in</a>
+                                    <button type="submit" class="shortcode_button left_icon btn_normal btn_type3"><i class="fa fa-sign-in"></i>Log in</button>
                                 </form>
                             </div>
                             <!-- //Login submenu -->
@@ -87,7 +98,7 @@
                 </div>
                 <div class="fleft">
                     <div class="phone"><a href="tel:+251912852989" > <i class="fa fa-phone"></i> +251 - 91285 2989</a></div>
-                    <div class="email"><a href="mailto:#"><i class="fa fa-envelope"></i> info@rootsystem.info</a></div>
+                    <div class="email"><a href="mailto:javascript:void(0);"><i class="fa fa-envelope"></i> info@rootsystem.info</a></div>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -122,7 +133,7 @@
                                             <li class="menu-item-has-children"><a href="javascript:void(0);">Single Post</a>
                                                 <div class="sub-nav">
                                                     <ul class="sub-menu">
-                                                        <li><a href="portfolio_post_fullwidth.html">Fullwidth Post</a></li>
+                                                        <li><a href="javascript:void(0);">Fullwidth Post</a></li>
                                                         <li><a href="portfolio_post_right_sidebar.html">With Right Sidebar</a></li>
                                                         <li><a href="portfolio_post_left_sidebar.html">With Left Sidebar</a></li>
                                                     </ul>
@@ -134,18 +145,11 @@
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Blog</a>
                                     <div class="sub-nav">
                                         <ul class="sub-menu">
-                                            <li><a href="blog_fullwidth.html">Fullwidth Blog</a></li>
-                                            <li><a href="blog_right_sidebar.html">With Right Sidebar</a></li>
-                                            <li><a href="blog_left_sidebar.html">With Left Sidebar</a></li>
-                                            <li class="menu-item-has-children"><a href="javascript:void(0);">Single Post</a>
-                                                <div class="sub-nav">
-                                                    <ul class="sub-menu">
-                                                        <li><a href="post_fullwidth.html">Fullwidth Post</a></li>
-                                                        <li><a href="post_right_sidebar.html">With Right Sidebar</a></li>
-                                                        <li><a href="post_left_sidebar.html">With Left Sidebar</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
+                                            <li><a href="/blog"> All Blogs</a></li>
+                                            @foreach(\App\Models\Category::allCategories() as $category)
+                                            <li><a href="/category/{{$category->id}}">{{$category->title}}</a></li>
+                                            @endforeach
+
                                         </ul>
                                     </div>
                                 </li>
@@ -160,14 +164,14 @@
                                     </div>
                                 </li>
                                 <li class="menu-item-has-children"><a href="javascript:void(0);">Contact</a>
-                                   
+
                                 </li>
                             </ul>
                         </nav>
                         <div class="top_search">
                             <a href="javascript:void(0);" class="search_btn not_click">Search Button</a>
                             <div class="top_search_wrap not_click">
-                                <form name="search_form" method="get" action="#" class="search_form not_click">
+                                <form name="search_form" method="get" action="javascript:void(0);" class="search_form not_click">
                                     <input type="text" name="s" value="" placeholder="Search" class="not_click">
                                     <input type="submit" value="Go">
                                 </form>
@@ -221,7 +225,7 @@
                                                              data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:0.5;sY:0.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeOut;"
                                                              data-transform_out="opacity:0;s:500;s:500;"
                                                              data-start="2000"
-                                                             data-elementdelay="0.05">#Programmer  #Consultant  #Tehnician
+                                                             data-elementdelay="0.05">javascript:void(0);Programmer  javascript:void(0);Consultant  javascript:void(0);Tehnician
                                                         </div>
                                                         <!-- LAYER NR. 3 -->
                                                         <div class="tp-caption tp-resizeme slide_btn dark_parent z_index5"
@@ -438,14 +442,14 @@
                                     <div class="col-sm-4 polygraphy element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/1.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Greeting Card Mock-Up</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Security Camera Installation</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphic Design</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">CCTV</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,14 +457,14 @@
                                     <div class="col-sm-4 branding textstyle element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/2.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Halloween Vector Flat Elements</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Printer Tonner Refill Serice</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Mock-Ups</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Tonner Refill</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -468,14 +472,14 @@
                                     <div class="col-sm-4 textstyle polygraphy element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/3.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Label Clothes Mockup vol 4</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Server Room Setup</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphic Design</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Networking</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -483,12 +487,12 @@
                                     <div class="col-sm-4 webui element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/4.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Branding Identity Mock-Up</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Branding Identity Designs</a></h6>
                                                 <div class="listing_meta">
                                                     <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphic Design</a></span>
                                                 </div>
@@ -498,14 +502,14 @@
                                     <div class="col-sm-4 branding webui element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/5.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">A4 PSD Mock-Up</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Flyers and Businesscards</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Mock-Ups</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphics Design</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -513,14 +517,14 @@
                                     <div class="col-sm-4 polygraphy branding element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/6.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Notepad Presentation Mockup</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Store and Inventory System</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Mock-Ups</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Software Development</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -528,14 +532,14 @@
                                     <div class="col-sm-4 webui branding element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/7.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Retro Text Effect vol 3</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Preventive and Corrective Maintenance</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphic Design</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Maintenance </a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -543,14 +547,14 @@
                                     <div class="col-sm-4 textstyle polygraphy element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/8.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">Piece of Cake Text Effect</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Website Design For Factory</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">PSD Templates</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Web Design</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -558,14 +562,14 @@
                                     <div class="col-sm-4 webui branding element">
                                         <div class="portfolio_item">
                                             <div class="portf_img">
-                                                <a href="portfolio_post_fullwidth.html">
+                                                <a href="javascript:void(0);">
                                                     <img alt="" src="/img/portfolio/masonry/9.jpg" />
                                                 </a>
                                             </div>
                                             <div class="portf_descr">
-                                                <h6 class="portf_title"><a href="portfolio_post_fullwidth.html">UI Project Resource</a></h6>
+                                                <h6 class="portf_title"><a href="javascript:void(0);">Website For Coffee Exporter</a></h6>
                                                 <div class="listing_meta">
-                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Graphic Design</a></span>
+                                                    <span><i class="fa fa-bookmark-o"></i><a href="javascript:void(0);">Website Development</a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -585,51 +589,51 @@
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Code</h6>
-                                                        <div class="skill_div" data-percent="97%" data-background="#08c1f3"></div>
+                                                        <div class="skill_div" data-percent="97%" data-background="javascript:void(0);08c1f3"></div>
                                                     </div>
                                                 </li>
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Design</h6>
-                                                        <div class="skill_div" data-percent="93%" data-background="#fecc17"></div>
+                                                        <div class="skill_div" data-percent="93%" data-background="javascript:void(0);fecc17"></div>
                                                     </div>
                                                 </li>
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Networking</h6>
-                                                        <div class="skill_div" data-percent="95%" data-background="#3db39e"></div>
+                                                        <div class="skill_div" data-percent="95%" data-background="javascript:void(0);3db39e"></div>
                                                     </div>
                                                 </li>
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Maintainance</h6>
-                                                        <div class="skill_div" data-percent="85%" data-background="#f1494b"></div>
+                                                        <div class="skill_div" data-percent="85%" data-background="javascript:void(0);f1494b"></div>
                                                     </div>
                                                 </li>
 
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Digital Marketing</h6>
-                                                        <div class="skill_div" data-percent="93%" data-background="#fecc17"></div>
+                                                        <div class="skill_div" data-percent="93%" data-background="javascript:void(0);fecc17"></div>
                                                     </div>
                                                 </li>
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Sales Supply</h6>
-                                                        <div class="skill_div" data-percent="95%" data-background="#3db39e"></div>
+                                                        <div class="skill_div" data-percent="95%" data-background="javascript:void(0);3db39e"></div>
                                                     </div>
                                                 </li>
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Security</h6>
-                                                        <div class="skill_div" data-percent="85%" data-background="#f1494b"></div>
+                                                        <div class="skill_div" data-percent="85%" data-background="javascript:void(0);f1494b"></div>
                                                     </div>
                                                 </li>
 
                                                 <li class="skill_li">
                                                     <div class="diagram_bar">
                                                         <h6>Consulting</h6>
-                                                        <div class="skill_div" data-percent="85%" data-background="#f1494b"></div>
+                                                        <div class="skill_div" data-percent="85%" data-background="javascript:void(0);f1494b"></div>
                                                     </div>
                                                 </li>
 
@@ -907,7 +911,7 @@
                                 </div>
                                 <div class="section">
                                     <p class="section_title"><i class="fa fa-envelope"></i> Email:</p>
-                                    <p class="pl15"><a href="mailto:#">info@rootsystem.info</a></p>
+                                    <p class="pl15"><a href="mailto:javascript:void(0);">info@rootsystem.info</a></p>
                                 </div>
                             </div>
                         </div>
@@ -1087,7 +1091,7 @@
                         tmp:''
                     }
                 },
-                fullScreenOffsetContainer: "#main_header"
+                fullScreenOffsetContainer: "javascript:void(0);main_header"
             });
         });
     </script>

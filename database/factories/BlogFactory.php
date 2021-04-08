@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class BlogFactory extends Factory
@@ -23,6 +24,11 @@ class BlogFactory extends Factory
     {
         return [
             //
+            'title'=>$this->faker->sentence,
+            'detail'=>$this->faker->paragraph(6,true),
+            'photo'=>'/img/blog.jpg',
+            'tags'=>$this->faker->words(5,true),
+            'category_id'=>Category::find(rand(1,10))
         ];
     }
 }

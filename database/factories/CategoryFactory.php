@@ -23,6 +23,9 @@ class CategoryFactory extends Factory
     {
         return [
             //
+            'title'=>$this->faker->word,
+            'detail'=>$this->faker->paragraph,
+            'photo'=>'/img/category.jpg'
         ];
     }
 }
