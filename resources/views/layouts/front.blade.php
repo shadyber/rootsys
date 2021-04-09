@@ -265,20 +265,19 @@
         <div class="container">
             <div class="foot_info_block">
                 <div class="logo_sect">
-                    <a href="index.html" class="logo"><img src="img/logo_white.png" class="logo_def" alt="" /><img src="img/retina/logo_white.png" class="logo_retina" alt="" /></a>
+                    <a href="/" class="logo"><img src="img/logo_white.png" class="logo_def" alt="" /><img src="img/retina/logo_white.png" class="logo_retina" alt="" /></a>
                 </div>
-                <div class="copyright">Copyright &copy; 2020 Root System. All Rights Reserved.</div>
-                <div class="foot_slogan">Easy to Use and Flexible ICT Solution</div>
+                <div class="copyright">Copyright &copy; 2021 Root System. All Rights Reserved.</div>
+                <div class="foot_slogan">Full Coverage for Your ICT Infrastructure </div>
                 <div class="foot_menu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="showreel.html">Showreel</a></li>
-                        <li><a href="portfolio_masonry.html">Portfolio</a></li>
-                        <li><a href="blog_right_sidebar.html">Blog</a></li>
-                        <li><a href="contact_sidebar.html">Contacts</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/service">Services</a></li>
+
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/contact">Contacts</a></li>
                     </ul>
                 </div>
             </div>
