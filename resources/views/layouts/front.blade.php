@@ -111,31 +111,8 @@
 
                             </li>
 
-                            <li class="menu-item-has-children"><a href="javascript:void(0);">Portfolio</a>
-                                <div class="sub-nav">
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><a href="javascript:void(0);">Grid</a>
-                                            <div class="sub-nav">
-                                                <ul class="sub-menu">
-                                                    <li><a href="portfolio_1col.html">1 Column</a></li>
-                                                    <li><a href="portfolio_2col.html">2 Columns</a></li>
-                                                    <li><a href="portfolio_3col.html">3 Columns</a></li>
-                                                    <li><a href="portfolio_4col.html">4 Columns</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="portfolio_masonry.html">Masonry</a></li>
-                                        <li class="menu-item-has-children"><a href="javascript:void(0);">Single Post</a>
-                                            <div class="sub-nav">
-                                                <ul class="sub-menu">
-                                                    <li><a href="javascript:void(0);">Fullwidth Post</a></li>
-                                                    <li><a href="portfolio_post_right_sidebar.html">With Right Sidebar</a></li>
-                                                    <li><a href="portfolio_post_left_sidebar.html">With Left Sidebar</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li class="menu-item-has-children"><a href="/portfolio">Portfolio</a>
+
                             </li>
                             <li class="menu-item-has-children"><a href="javascript:void(0);">Blog</a>
                                 <div class="sub-nav">
@@ -244,19 +221,14 @@
                             <li><a href="javascript:void(0);">About Company</a></li>
                             <li><a href="javascript:void(0);">Services</a></li>
                             <li><a href="javascript:void(0);">Frequently Asked Questions</a></li>
-                            <li><a href="javascript:void(0);">Showreel</a></li>
+
                             <li><a href="javascript:void(0);">Portfolio</a></li>
                             <li><a href="javascript:void(0);">Root System Blog</a></li>
                             <li><a href="javascript:void(0);">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="sidepanel widget_flickr">
-                        <h6 class="title">Flickr Photostream</h6>
-                        <div class="flickr_widget_wrapper"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
