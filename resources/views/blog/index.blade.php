@@ -34,8 +34,8 @@
                                                 <span><i class="fa fa-comments-o"></i><a href="javascript:void(0);">3 Comments</a></span>
                                                 <span><i class="fa fa-tag"></i><a href="javascript:void(0);">people</a>, <a href="javascript:void(0);">photo</a>, <a href="javascript:void(0);">places</a></span>
                                             </div>
-                                            <h5 class="blogpost_title"><a href="post_right_sidebar.html">{{$blog->title}}</a></h5>
-                                            <p>{{  $blog->detail}}</p>
+                                            <h5 class="blogpost_title"><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></h5>
+                                            <p>{{ substr($blog->detail,0,255)}}...</p>
                                             <a class="blog_post_readmore" href="/blog/{{$blog->id}}">Read More<i class="fa fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
@@ -50,3 +50,9 @@
     </div>
 
 @endsection
+@section('js')
+    <!-- Portfolio -->
+    <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="/js/sorting.js"></script>
+@endsection
+

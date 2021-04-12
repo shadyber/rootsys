@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" href="/img/apple_icons_57x57.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/apple_icons_72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple_icons_114x114.png">
-    <title>Root System |ICT Solutions</title>
+    <title>Root System | ICT Solutions</title>
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,900" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
@@ -275,5 +275,6 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/modules.js"></script>
 <script type="text/javascript" src="/js/theme.js"></script>
+@yield('js')
 </body>
 </html>

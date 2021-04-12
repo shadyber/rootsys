@@ -15,6 +15,8 @@ class ProjectController extends Controller
     public function index()
     {
         //
+        $projects=Project::all();
+        return view('portfolio.index')->with(['projects'=>$projects]);
     }
 
     /**
@@ -47,6 +49,7 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         //
+        return view('portfolio.show')->with(['project'=>$project]);
     }
 
     /**

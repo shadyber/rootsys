@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('/blog',\App\Http\Controllers\BlogController::class);
+Route::resource('/portfolio',\App\Http\Controllers\ProjectController::class);
 Route::resource('/shop',\App\Http\Controllers\ProductController::class);
 Route::resource('/category',\App\Http\Controllers\CategoryController::class);
 
