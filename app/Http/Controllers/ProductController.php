@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Image;
 
 class ProductController extends Controller
 {
@@ -42,7 +43,52 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title'=>'required',
+            'detail'=>'required',
+            'price'=>'required',
+            'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
+        ]);
+
+        if($request->hasFile('photo')) {
+
+            $newImageName=uniqid().'_'. $request->title.'.'.$request->photo->extension();
+
+
+            $file = $request->file('photo');
+            $file_name =$newImageName;
+            $destinationPath = 'images/items/';
+            $new_img = Image::make($file->getRealPath())->resize(true, true);
+
+// save file with medium quality
+            $new_img->save($destinationPath . $file_name, 100);
+            $new_img->save($destinationPath.'thumbnail/' . $file_name, 15);
+
+            $request->photo->move(public_path('images/items'),$newImageName);
+
+        }
+
+
+        Product::create([
+                'title'=>$request->input('title'),
+                'detail'=>$request->input('detail'),
+               // 'slug'=>SlugService::createSlug(Item::class,'slug',$request->title.$request->_token),
+                'photo'=>'/images/items/'.$newImageName,
+                'thumb'=>'/images/items/thumbnile/'.$newImageName,
+                'tags'=>$request->input('tags'),
+
+                'price'=>$request->input('price'),
+
+                'init_qnt'=>$request->input('init_qnt'),
+                'badge'=>$request->input('badge'),
+
+                'product_category_id'=>$request->input('product_category_id'),
+            ]
+        );
+
+        return redirect()->back()->with('success','Item Created Succusfully!');
+
+
     }
 
     /**
@@ -54,6 +100,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+        return view('shop.show')->with(['product'=>$product]);
     }
 
     /**

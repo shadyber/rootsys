@@ -26,8 +26,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="small mb-1 text-dark" for="category_id">Category</label>
-                                <select class="form-control py-4" name="category_id"  aria-describedby="Category" placeholder="Select  Category">
+                                <label class="small mb-1 text-dark" for="product_category_id">Category</label>
+                                <select class="form-control" name="product_category_id"  aria-describedby="product_category_id" placeholder="Select  Category">
                                     <option value="">Select Category</option>
                                     @foreach(\App\Models\ProductCategory::allCategories() as $category)
                                         <option value="{{$category->id}}">{{$category->title}}</option>
@@ -61,6 +61,23 @@
                                         <input class="form-control py-4" id="price" name="price" type="number" placeholder="Price" required>
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="small mb-1" for="price">In Stock Qnt</label>
+                                        <input class="form-control py-4" id="init_qnt" name="init_qnt" type="number" placeholder="Stock Balance" required>
+                                    </div>
+                                </div>
+
+
+
+         <div class="form-group col-md-12">
+             <select class="form-control form-control" name="badge" id="badge" placeholder="Item Badge" >
+                 <option value="">Select Badge</option>
+                 <option value="new">NEW</option>
+                 <option value="hot">HOT</option>
+                 <option value="sale">SALE</option>
+             </select>
+         </div>
 
                             </div>
 
@@ -72,12 +89,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mt-4 mb-0"><button type="submit" class="btn btn-primary btn-block"  >Create Blog</button></div>
+                            <div class="form-group mt-4 mb-0"><button type="submit" class="btn btn-primary btn-block"  >Create Product</button></div>
                         </form>
                     </div>
-                    <div class="card-footer text-center">
-                        <div class="small"><a href="http://www.youtube.com/channel/UCri_1_-P8-LkhXMJCurJ1nA">Subscribe on YouTube For More</a></div>
-                    </div>
+
                 </div>
             </div>
         </div>

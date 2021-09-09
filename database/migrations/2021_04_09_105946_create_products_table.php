@@ -17,10 +17,14 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('detail');
-            $table->string('photo')->default('/img/product/item.jpg');
-            $table->string('more_photo')->nullable();
+            $table->string('photo')->default('/images/items/item.jpg');
+            $table->string('thumb')->default('/images/items/item.jpg');
+
             $table->string('price')->default('0');
             $table->string('spec')->default('[]');
+            $table->string('tags')->default('product,');
+            $table->integer('init_qnt')->default(0);
+            $table->string('badge')->default('new');
             $table->bigInteger('product_category_id')->unsigned();
             $table->foreign('product_category_id')->references('id')->on('product_categories');
 
