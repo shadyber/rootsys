@@ -27,6 +27,7 @@ class ProjectController extends Controller
     public function create()
     {
         //
+        return view('project.create');
     }
 
     /**
@@ -61,6 +62,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         //
+        return  view('project.edit')->with(['project'=>$project]);
     }
 
     /**

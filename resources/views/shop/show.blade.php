@@ -1,115 +1,85 @@
 @extends('layouts.front')
+@section('css')
+    <link rel="stylesheet" href="/css/detail.css" type="text/css" media="all" />
+
+@endsection
 @section('content')
 
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
 
-    <div class="breadcrumbs">
-        <div class="container">
-            <a href="/">Home</a><a href="/blog">Blog</a><span>here</span>
-        </div>
-    </div>
 
-    <div class="content_block row right-sidebar">
-        <div class="page_title">
-            <h1>  Product Detail</h1>
-            <div class="icon_divider"></div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-        </div>
-        <div class="fl-container hasRS">
-            <div class="posts-block">
-              detail
-            </div>
-        </div>
-        <div class="right-sidebar-block">
+                        <div class="container">
 
-            <div class="sidepanel widget_search">
-                <form name="search_form" method="get" action="javascript:void(0);" class="search_form">
-                    <input type="text" name="s" value="" placeholder="Search the Site">
-                    <input type="submit" value="Go">
-                </form>
-            </div>
+                            <!-- default start -->
+                            <section id="default" class="padding-top0">
+                                <div class="row">
+                                    <div class="large-12 column"><h3>Product Zooming</h3></div>
+                                    <hr>
+                                    <div class="large-5 column">
+                                        <div class="xzoom-container">
+                                            <img class="xzoom" id="xzoom-default" src="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/preview/01_b_car.jpg" xoriginal="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/original/01_b_car.jpg" />
+                                            <div class="xzoom-thumbs">
+                                                <a href="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/original/01_b_car.jpg"><img class="xzoom-gallery" width="80" src="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/thumbs/01_b_car.jpg"  xpreview="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/preview/01_b_car.jpg" title="The description goes here"></a>
 
-            <div class="sidepanel widget_cart">
-                <h6 class="title">Cart</h6>
-                <div class="cart_wrap">
-                    <ul class="product_posts">
-                        <li>
-                            <img src="img/shop/4.jpg" alt="">
-                            <a href="shop_product.html" class="title">Duis Aute Irure Dolor</a>
-                            <div class="price">1<span>x</span>$1,190</div>
-                            <a class="remove_products" href="javascript:void(0);">Close</a>
-                        </li>
-                    </ul>
-                    <div class="subtotal">Subtotal: <span>$1,190</span></div>
-                    <a class="shortcode_button btn_normal btn_type3 widget_cart_btn" href="shop_cart.html">View Cart</a>
-                    <a class="shortcode_button btn_normal btn_type1 mr0 widget_checkout_btn" href="javascript:void(0);">Checkout</a>
-                </div>
-            </div>
+                                                <a href="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/original/02_o_car.jpg"><img class="xzoom-gallery" width="80" src="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/preview/02_o_car.jpg" title="The description goes here"></a>
 
-            <div class="sidepanel widget_categories">
-                <h6 class="title">Categories</h6>
-                <ul>
-                    <li class="cat-item"><a href="javascript:void(0);">Accessories</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">Cardigans</a></li>
-                    <li class="cat-item current-menu-item"><a href="javascript:void(0);">Dresses</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">Hoodies</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">Jeans</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">Men</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">T-Shirts</a></li>
-                    <li class="cat-item"><a href="javascript:void(0);">Women</a></li>
-                </ul>
-            </div>
+                                                <a href="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/original/03_r_car.jpg"><img class="xzoom-gallery" width="80" src="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/preview/03_r_car.jpg" title="The description goes here"></a>
 
-            <div class="sidepanel widget_filter">
-                <h6 class="title">FIlter By Price</h6>
-                <div class="price_filter_wrap">
-                    <div class="range-filter-wrapper">
-                        <div id="slider-range"></div>
+                                                <a href="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/original/04_g_car.jpg"><img class="xzoom-gallery" width="80" src="http://www.jqueryscript.net/demo/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/images/gallery/preview/04_g_car.jpg" title="The description goes here"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="large-7 column"></div>
+                                </div>
+                            </section>
+                            <!-- default end -->
+                        </div>
                     </div>
-                    <div class="cart_widget_total">Price: <span class="price-filter"><span class="from">$0</span> - <span class="to">$200</span></span></div>
-                    <a class="shortcode_button btn_normal btn_type6 widget_filter_btn" href="javascript:void(0);">Filter</a>
-                    <div class="clear"></div>
+                    <div class="details col-md-6">
+                        <h3 class="product-title">men's shoes fashion</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="review-no">41 reviews</span>
+                        </div>
+                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+                        <h4 class="price">current price: <span>$180</span></h4>
+                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+                        <h5 class="sizes">sizes:
+                            <span class="size" data-toggle="tooltip" title="small">s</span>
+                            <span class="size" data-toggle="tooltip" title="medium">m</span>
+                            <span class="size" data-toggle="tooltip" title="large">l</span>
+                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                        </h5>
+                        <h5 class="colors">colors:
+                            <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                            <span class="color green"></span>
+                            <span class="color blue"></span>
+                        </h5>
+                        <div class="action">
+                            <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="sidepanel widget_products">
-                <h6 class="title">Featured Products</h6>
-                <ul class="product_posts">
-                    <li>
-                        <a href="shop_product.html" class="title"><img src="img/shop/2.jpg" alt=""></a>
-                        <a href="shop_product.html" class="title">Duis Aute Irure Dolor</a>
-                        <div class="price">$3,000</div>
-                    </li>
-                    <li>
-                        <a href="shop_product.html" class="title"><img src="img/shop/3.jpg" alt=""></a>
-                        <a href="shop_product.html" class="title">Temporibus Autem Quibusdam</a>
-                        <div class="price">$400</div>
-                    </li>
-                    <li>
-                        <a href="shop_product.html" class="title"><img src="img/shop/4.jpg" alt=""></a>
-                        <a href="shop_product.html" class="title">Saepe Eveniet Ut Et</a>
-                        <div class="price">$29.99</div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidepanel widget_tag_cloud">
-                <h6 class="title">Popular Tags</h6>
-                <div class="tagcloud">
-                    <a href="javascript:void(0);">art</a>
-                    <a href="javascript:void(0);">branding</a>
-                    <a href="javascript:void(0);">business</a>
-                    <a href="javascript:void(0);">css</a>
-                    <a href="javascript:void(0);">gallery</a>
-                    <a href="javascript:void(0);">html</a>
-                    <a href="javascript:void(0);">people</a>
-                    <a href="javascript:void(0);">photo</a>
-                    <a href="javascript:void(0);">photoshop</a>
-                </div>
-            </div>
-
         </div>
-        <div class="clear"></div>
     </div>
+@endsection
 
+
+@section('js')
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/js/detail.js"></script>
 
 @endsection

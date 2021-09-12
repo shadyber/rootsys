@@ -111,7 +111,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('shop.edit')->with('product',$product);
     }
 
     /**
@@ -123,7 +123,23 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product = Product::findOrFail($product->id);
+
+        $this->validate($request, [
+            'title' => 'required',
+            'detail' => 'required',
+            'price' => 'required'
+        ]);
+
+
+
+        $input = $request->except('photo');
+        $product->fill($input)->save();
+
+
+        return redirect()->back()->with('success','Item Updated Successfully.');
+
+
     }
 
     /**

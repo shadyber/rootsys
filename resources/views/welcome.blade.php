@@ -52,8 +52,8 @@
                             <a href="/shop" class="view_cart_btn"><i class="fa fa-shopping-cart"></i> $00.00 (0 items)</a>
                             <!-- Cart submenu -->
                             <div class="cart_submenu">
-                                <!--div class="cart_wrap">
-                                    < ul class="product_posts">
+                                <div class="cart_wrap">
+                                    <ul class="product_posts">
                                         <li>
                                             <img src="/img/shop/4.jpg" alt="" />
                                             <a href="shop_product.html" class="title">Duis Aute Irure Dolor</a>
@@ -66,11 +66,11 @@
                                             <div class="price">1<span>x</span>$400</div>
                                             <a class="remove_products" href="javascript:void(0);">Close</a>
                                         </li>
-                                    </ul >
+                                    </ul>
                                     <div class="subtotal">Subtotal: <span>$1,590</span></div>
                                     <a href="shop_cart.html" class="shortcode_button btn_normal btn_type3">View cart</a>
                                     <a href="javascript:void(0);" class="shortcode_button btn_normal btn_type1 mr0">Checkout</a>
-                                </div -->
+                                </div>
                             </div>
                             <!-- //Cart submenu -->
                         </div>

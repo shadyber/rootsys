@@ -26,6 +26,8 @@ class ProductFactory extends Factory
             'title'=>$this->faker->sentence,
             'detail'=>$this->faker->paragraph,
             'price'=>$this->faker->numberBetween(1,2000),
+            'photo'=>$this->faker->imageUrl(720,680),
+            'thumb'=>$this->faker->numberBetween(340,480),
             'product_category_id'=>$this->faker->numberBetween(1,10),
         ];
     }

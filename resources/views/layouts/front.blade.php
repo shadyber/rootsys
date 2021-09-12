@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/theme.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/custom.css" type="text/css" media="all" />
+
+  @yield('css')
+
 </head>
 <body>
 <div id="main_header" class="type4">
